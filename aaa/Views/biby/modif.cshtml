@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "modif";
+}
+
+<h2>modif</h2>
+
+@model aaa.Models.Biby
+
+@using (Html.BeginForm()) {
+    <fieldset>
+        <div>Nom</div>
+        <div>
+            @Html.EditorFor(model =>model.NomBiby)
+            @Html.ValidationMessageFor(model=>model.NomBiby)
+        </div>
+        <div>
+            Isa
+        </div>
+        <div>
+            @Html.EditorFor(model => model.isa)
+            @Html.ValidationMessageFor(model => model.isa)
+        </div>
+        <p>
+            <input type="submit" value="valider"/>
+        </p>
+    </fieldset>
+}
+
+
+

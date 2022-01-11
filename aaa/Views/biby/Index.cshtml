@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Bivy</h2>
+
+@model IEnumerable<aaa.Models.Biby>  
+
+@foreach (var biby in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelbiby => biby.NomBiby)
+        </td>
+        <td>
+            @Html.DisplayFor(modelbiby => biby.isa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit","modif", new{ Id=biby.Id}) 
+            @Html.ActionLink("Delete","Delete", new{ Id=biby.Id}) 
+        </td>
+        <br />
+        <br />
+    </tr>
+}
+
